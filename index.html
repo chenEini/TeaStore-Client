@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="teaStore">
+    <head>
+        <link rel="stylesheet" type="text/css" href="Utils/bootstrap/dist/js/bootstrap.min.js"/>
+    </head>
+    <body ng-controller="TeaStoreController as teaStore"> 
+            <div ng-repeat="product in teaStore.products">
+                <h1> {{product.name}} </h1>
+                <h2> ${{product.price}}</h2>
+                <p> {{product.description}} </p>
+                <button ng-show="product.canPurchase"> Add to cart </button>
+            </div>
+        <script type="text/javascript" src="Utils/angular/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
