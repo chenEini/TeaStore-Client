@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html ng-app="teaStore">
     <head>
-        <link rel="stylesheet" type="text/css" href="Utils/bootstrap/dist/js/bootstrap.min.js"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
-    <body ng-controller="TeaStoreController as teaStore"> 
-            <div ng-repeat="product in teaStore.products">
-                <h1> {{product.name}} </h1>
-                <h2> ${{product.price}}</h2>
-                <p> {{product.description}} </p>
-                <button ng-show="product.canPurchase"> Add to cart </button>
-            </div>
-        <script type="text/javascript" src="Utils/angular/angular.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
+    <body>        
+        <header>
+            <ul>
+                <li><a href="#!/"> Home </a></li>
+                <li><a href="#!/about" > About Us </a></li>
+                <li><a href="#!/allTeas"> All Teas </a></li>
+            </ul>
+        </header>
+        
+        <section ng-view="">
+        </section>
+        
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="javascript/app.js"></script>
+        
+        <!-- Services -->
+        <script type="text/javascript" src="javascript/services/tea.js"></script>
+        
+        <!-- Controllers -->
+        <script type="text/javascript" src="javascript/controllers/homeController.js"></script>
+        <script type="text/javascript" src="javascript/controllers/allTeasController.js"></script>
+        <script type="text/javascript" src="javascript/controllers/teaController.js"></script>
+        <script type="text/javascript" src="javascript/controllers/aboutController.js"></script>
+        
+        <!-- Directives -->
+        <script type="text/javascript" src="javascript/directives/teaItem.js"></script>
     </body>
 </html>

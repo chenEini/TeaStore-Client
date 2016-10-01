@@ -1,0 +1,6 @@
+<a ng-href="#!/tea/{{product.id}}">
+    <h1> {{product.attributes.name}} </h1>
+    <h2> ${{product.attributes.price}}</h2>
+    <p> {{product.relationships['tea-type'].data.name}} </p>
+    <button> Add to cart </button>
+</a>
