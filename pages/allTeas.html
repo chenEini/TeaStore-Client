@@ -1,2 +1,12 @@
-<tea-item ng-repeat="product in products" product="product">
+<header>
+    <input type="text" ng-model="searchText"/>
+    <select>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+</header>
+
+<tea-item ng-repeat="product in allTeas.products | filter:searchText" product="product">
 </tea-item>

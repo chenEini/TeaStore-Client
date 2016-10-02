@@ -8,7 +8,8 @@
           $routeProvider.
             when('/', {
               templateUrl: 'pages/home.html',
-              controller: 'HomeController'
+              controller: 'HomeController',
+              controllerAs: 'homeCtrl'
             }).
             when('/about', {
               templateUrl: 'pages/about.html',
@@ -21,7 +22,8 @@
             }).
           when('/tea/:teaId', {
               templateUrl: 'pages/tea.html',
-              controller: 'TeaController'
+              controller: 'TeaController',
+              controllerAs: 'teaCtrl'
           })
           .otherwise('/');
         }
