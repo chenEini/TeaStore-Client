@@ -1,5 +1,5 @@
 angular.module('teaStore').
-    factory('Tea', function teaFactory($http, $q){    
+    factory('TeaFactory', function teaFactory($http, $q){    
         var items;
     
         return {            
@@ -11,8 +11,7 @@ angular.module('teaStore').
                 else {
                     $http.get('http://localhost:3000/teas.json').then(
                     function success(response){
-                        console.log(response);
-                        items = response.data.data;
+                        items = response.data;
                         d.resolve(items);
                     },
                     function failure(reason){

@@ -1,0 +1,18 @@
+*{
+    margin: 10;
+    padding: 10;
+}
+a {
+   text-decoration: none; 
+}
+.teaImg{
+    height: 150px;
+    width: 150px;
+}
+.tea-item{
+    display: block;
+    float: left;
+    padding: 10px;
+    height: auto;
+    width: 30%;
+}

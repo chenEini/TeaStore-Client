@@ -1,12 +1,6 @@
 angular.module('teaStore').
-    controller('TeaController', ['$scope', '$routeParams', 'Tea', function($scope, $routeParams, Tea){
-        Tea.getTeas().then(function(data){
-            this.products = data;
-        }, function(error){
-            console.log(error);
-        });
+    controller('TeaController', ['$scope', '$routeParams', 'items', function($scope, $routeParams, items){
+        $scope.teas = items;
         
         $scope.teaId = $routeParams.teaId;
-        
- 
     }]);

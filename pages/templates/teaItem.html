@@ -1,6 +1,7 @@
-<a ng-href="#!/tea/{{product.id}}">
-    <h1> {{product.attributes.name}} </h1>
-    <h2> ${{product.attributes.price}}</h2>
-    <p> {{product.relationships['tea-type'].data.name}} </p>
+<a class="tea-item" ng-href="#!/tea/{{item.id}}">
+    <img class="teaImg" ng-src="/css/Images/{{item.image}}"/> 
+    <h1> {{item.name}} </h1>
+    <h2> {{item.price | currency}}</h2>
+    <p> {{item['tea-type'].data.name}} </p>
     <button> Add to cart </button>
 </a>
