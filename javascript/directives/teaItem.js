@@ -3,12 +3,11 @@ angular.module('teaStore').
         return {
             restrict: 'E',
             replace: true,
+			transclude:true,
             scope:{
                 tea: '=',
                 addToCart: '='
             },
-            templateUrl: 'pages/templates/teaItem.html',
-            link: function(scope, element, attrs){
-            }
-        }
+            templateUrl: 'pages/templates/teaItem.html'
+		}
     });

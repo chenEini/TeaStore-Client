@@ -3,19 +3,17 @@
     <head>
         <meta charset="utf-8">
         <title>Tea Store</title>
+		<link rel="shortcut icon" href="css/Images/Favicon.png"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>  
         <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
     </head>
     <body>        
         <header>
             <div class="topMenu">
-                <a href="#!/cart" class="shoppingCart">
-                    <img class="cartIcon" src="css/Images/shopping-bag-icon.png"/>
-                    <span></span>
-                </a>              
+               <cart-icon></cart-icon>             
             </div>
             <h1 class="siteTitle">
-                <a href="#!/"> <img class="siteLogo" src="css/Images/icon3.png"/></a>
+                <a href="#!/"> <img class="siteLogo" src="css/Images/Icon.png"/></a>
             </h1>
             <div class="teaWallpaper"></div>
             <ul class="navBar">
@@ -46,11 +44,11 @@
         <script type="text/javascript" src="javascript/controllers/homeController.js"></script>
         <script type="text/javascript" src="javascript/controllers/allTeasController.js"></script>
         <script type="text/javascript" src="javascript/controllers/teaController.js"></script>
-        <script type="text/javascript" src="javascript/controllers/aboutController.js"></script>
 		<script type="text/javascript" src="javascript/controllers/cartController.js"></script>
         
         <!-- Directives -->
         <script type="text/javascript" src="javascript/directives/teaItem.js"></script>
         <script type="text/javascript" src="javascript/directives/addToCart.js"></script>
+		<script type="text/javascript" src="javascript/directives/cartIcon.js"></script>
     </body>
 </html>

@@ -3,6 +3,6 @@ angular.module('teaStore').
         $scope.addToCart = true;
         var teaId = parseInt($routeParams.teaId);
         if (angular.isNumber(teaId)){
-            $scope.tea = TeaFactory.getTea(teaId);    
+            $scope.tea = TeaFactory.getTeaById(teaId);    
         }
     }]);

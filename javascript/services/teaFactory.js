@@ -1,7 +1,7 @@
 angular.module('teaStore').
     factory('TeaFactory', function teaFactory($http, $q){    
         var teaList;
-    
+	
         return {            
             getTeas: function(){
                 var d = $q.defer();
@@ -17,10 +17,10 @@ angular.module('teaStore').
                     function failure(reason){
                         d.reject(reason);
                     });                    
-                } 
+				}
                 return d.promise;
-            },
-            getTea: function(teaId){
+			},
+            getTeaById: function(teaId){
                 var selectedTea;
                 
                 angular.forEach(teaList, function(value, key){
@@ -29,8 +29,8 @@ angular.module('teaStore').
                         return;
                     }
                 });
-                
+          
                 return selectedTea;
             }
-        }
+		}
 });

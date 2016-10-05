@@ -8,10 +8,11 @@ angular.module('teaStore').
                 tea: '='
             },
             templateUrl: 'pages/templates/addToCart.html',
-            link: function(scope, element, attrs){
-                element.bind('click', function(){
-                    CartFactory.addCartItem(scope.tea);
-                });
-            }
-        }
-    }]);
+			link: function(scope, element, attrs){
+					scope.addItemToCart = function(){
+						CartFactory.addCartItem(scope.tea);
+						scope.$root.cartAmount = CartFactory.getCartAmount();	
+					};
+			}
+		}
+	}]);
