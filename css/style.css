@@ -1,15 +1,49 @@
 *{
-    margin: 10;
-    padding: 10;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 a {
    text-decoration: none; 
+}
+.topMenu{
+    float: right;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.cartIcon{
+    height: 40px;
+    width: 40px;
+}
+.siteLogo{
+    height: 220px;
+    width: 220px; 
+}
+.siteTitle{
+    height: 135px;
+    display: block;
+    text-align: center;
+}
+.teaWallpaper{
+    background: url(Images/Tea_Loose2.jpg);
+    background-repeat: round;
+    display: block;
+    height: 220px;
+    width: 100%;
+}
+.navBar{
+    margin: 10px;
+    display: inline-block
+}
+.navBar li{
+    display: inline;
+    padding: 3px;
 }
 .teaImg{
     height: 150px;
     width: 150px;
 }
-.tea-item{
+.teaItem{
     display: block;
     float: left;
     padding: 10px;

@@ -1,8 +1,6 @@
 angular.module('teaStore').
-    controller('AllTeasController', ['$scope', 'items', function($scope, items){
-        $scope.teas = items;
-        /*TeaFactory.getTeas().then(function(data){
-            $scope.teas = data;            
-        });*/
-        $scope.orderbyfilter = ""; 
+    controller('AllTeasController', ['$scope', 'teaList', function($scope, teaList){
+        $scope.teas = teaList;
+        $scope.orderbyfilter = "";
+        $scope.addToCart = true;
     }]);

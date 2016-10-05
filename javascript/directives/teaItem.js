@@ -4,11 +4,11 @@ angular.module('teaStore').
             restrict: 'E',
             replace: true,
             scope:{
-                item: '='
+                tea: '=',
+                addToCart: '='
             },
             templateUrl: 'pages/templates/teaItem.html',
             link: function(scope, element, attrs){
-                
             }
         }
     });

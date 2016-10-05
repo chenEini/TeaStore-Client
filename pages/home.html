@@ -1,3 +1,4 @@
-<h1>This is the home page</h1>
-<tea-item ng-repeat="product in teas | orderBy:'-price' | limitTo:3" item="product">
+<h1>This is the home page! meet our NEW collection!</h1>
+
+<tea-item ng-repeat="tea in teas | orderBy:'-price' | limitTo:3" tea="tea" add-to-cart="addToCart">
 </tea-item>

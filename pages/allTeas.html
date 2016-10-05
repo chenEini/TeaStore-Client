@@ -1,5 +1,5 @@
 <header>
-    search by name
+    search by name:
     <input type="text" ng-model="searchText"/>
     <select ng-model="orderbyfilter">
         <option selected value="">select filter</option>
@@ -9,5 +9,5 @@
     </select>
 </header>
 
-<tea-item ng-repeat="product in teas | filter:{name:searchText} | orderBy:orderbyfilter" item="product">
+<tea-item ng-repeat="tea in teas | filter:{name:searchText} | orderBy:orderbyfilter" tea="tea" add-to-cart="addToCart">
 </tea-item>

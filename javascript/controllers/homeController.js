@@ -1,4 +1,5 @@
 angular.module('teaStore').
-    controller('HomeController', ['$scope', 'items',function($scope, items){
-        $scope.teas = items;
+    controller('HomeController', ['$scope', 'teaList',function($scope, teaList){
+        $scope.teas = teaList;
+        $scope.addToCart = false;
     }]);

@@ -1,6 +1,8 @@
 angular.module('teaStore').
-    controller('TeaController', ['$scope', '$routeParams', 'items', function($scope, $routeParams, items){
-        $scope.teas = items;
-        
-        $scope.teaId = $routeParams.teaId;
+    controller('TeaController', ['$scope', '$routeParams', 'TeaFactory', function($scope, $routeParams, TeaFactory){
+        $scope.addToCart = true;
+        var teaId = parseInt($routeParams.teaId);
+        if (angular.isNumber(teaId)){
+            $scope.tea = TeaFactory.getTea(teaId);    
+        }
     }]);
