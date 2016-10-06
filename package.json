@@ -1,0 +1,23 @@
+{
+  "name": "tea_store",
+  "version": "1.0.0",
+  "description": "Online Tea Store",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenEini/TeaStore-Client.git"
+  },
+  "author": "Chen Eini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenEini/TeaStore-Client/issues"
+  },
+  "homepage": "https://github.com/chenEini/TeaStore-Client#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
