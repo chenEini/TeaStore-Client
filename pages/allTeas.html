@@ -1,13 +1,13 @@
-<header>
+<div class="filters form-inline">
     search by name:
-    <input type="text" ng-model="searchText"/>
-    <select ng-model="orderbyfilter">
+    <input class="form-control" type="text" ng-model="searchText"/>
+    <select class="form-control" ng-model="orderbyfilter">
         <option selected value="">select filter</option>
         <option value="+price">price - low to high </option>
         <option value="-price">price - high to low</option>
         <option value="caffeineLevel">caffeine Level</option>
     </select>
-</header>
+</div>
 
 <tea-item ng-repeat="tea in teas | filter:{name:searchText} | orderBy:orderbyfilter" tea="tea" add-to-cart="addToCart">
 </tea-item>

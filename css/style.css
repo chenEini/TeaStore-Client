@@ -1,7 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+	margin: 0;
+    font-family: Monospace,sans-serif;
 }
 a {
    text-decoration: none; 
@@ -11,16 +10,12 @@ a {
     margin-right: 5px;
     margin-top: 3px;
 }
-.cartIcon{
-    height: 40px;
-    width: 40px;
-}
 .siteLogo{
-    height: 220px;
-    width: 220px; 
+	margin-top: 50px;
 }
 .siteTitle{
-    height: 135px;
+    height: 130px;
+	margin: 0;
     display: block;
     text-align: center;
 }
@@ -32,12 +27,29 @@ a {
     width: 100%;
 }
 .navBar{
-    margin: 10px;
+    margin: 5px;
+	margin-bottom: 20px;
     display: inline-block;
+	padding-left: 120px;
+	padding-right: 120px;
 }
 .navBar li{
     display: inline;
-    padding: 3px;
+    padding: 5px;
+}
+.navBar li a{
+	text-decoration: none;
+	color: black;
+}
+.mainView{
+	padding-left: 120px;
+	padding-right: 120px;
+	margin-top: 10px;
+	width: 100%;
+}
+.filters{
+	margin: 5px;
+	margin-left: 10px;
 }
 .teaImg{
     height: 150px;
@@ -47,6 +59,24 @@ a {
     display: block;
     float: left;
     padding: 10px;
-    height: auto;
-    width: 30%;
+    height: 400px;
+	align-content: center;
+}
+.about{
+	margin-left: 60px;
+}
+.teaFlowerImg{
+	background: url(Images/Tea-Flowers-Wallpaper.jpg);
+    background-repeat: round;
+    display: inline-block;
+    height: 270px;
+	width: 400px;
+}
+.teaCupImg{
+	background: url(Images/Tea_Cup.jpg);
+    background-repeat: round;
+    display: inline-block;
+    height: 250px;
+	width: 400px;
+	margin-bottom: 5px;
 }

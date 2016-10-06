@@ -11,7 +11,11 @@ angular.module('teaStore').
                 else {
                     $http.get('http://localhost:3000/teas.json').then(
                     function success(response){
+						
                         teaList = response.data;
+						angular.forEach(teaList, function(item){
+							item.price = parseFloat(item.price);
+						});
                         d.resolve(teaList);
                     },
                     function failure(reason){
@@ -23,14 +27,16 @@ angular.module('teaStore').
             getTeaById: function(teaId){
                 var selectedTea;
                 
-                angular.forEach(teaList, function(value, key){
-                    if (value.id === teaId){
-                        selectedTea = value;
-                        return;
-                    }
-                });
-          
-                return selectedTea;
+				if(teaList){
+					angular.forEach(teaList, function(value, key){
+						if (value.id === teaId){
+							selectedTea = value;
+							return;
+						}
+					});
+
+					return selectedTea;
+				}
             }
 		}
 });

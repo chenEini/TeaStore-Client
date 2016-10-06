@@ -2,39 +2,35 @@
 <html ng-app="teaStore">
     <head>
         <meta charset="utf-8">
-        <title>Tea Store</title>
-		<link rel="shortcut icon" href="css/Images/Favicon.png"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>  
-        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
-    </head>
+        <title>TasTea</title>
+		<link rel="shortcut icon" href="css/Images/Favicon.png"/> 
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/> 
+	</head>
     <body>        
         <header>
-            <div class="topMenu">
+            <div class="topMenu row">
                <cart-icon></cart-icon>             
             </div>
-            <h1 class="siteTitle">
-                <a href="#!/"> <img class="siteLogo" src="css/Images/Icon.png"/></a>
-            </h1>
+            <div class="siteTitle row">
+                <a href="#!/"><img class="siteLogo" src="css/Images/Icon.png" width="225"/></a>
+            </div>
             <div class="teaWallpaper"></div>
-            <ul class="navBar">
+            <ul class="navBar nav nav-tabs nav-justified">
                 <li><a href="#!/"> Home </a></li>
                 <li><a href="#!/about" > About Us </a></li>
                 <li><a href="#!/allTeas"> All Teas </a></li>
             </ul>
         </header>
         
-        <section ng-view="">
+        <section class="mainView col-md-10" ng-view="">
         </section>
         
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
-        <script type="text/javascript" src="javascript/app.js"></script>
-        
-        <!-- Angular Material -->
-        <script src="bower_components/angular-material/angular-material.min.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-        <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-        <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="javascript/app.js"></script>
         
         <!-- Services -->
         <script type="text/javascript" src="javascript/services/teaFactory.js"></script>

@@ -1,7 +1,7 @@
 <img class="teaImg" ng-src="/css/Images/{{tea.image}}"/> 
 <h1> {{tea.name}} </h1>
-<h2> {{tea.price | currency}}</h2>
 <p> {{tea.teaType.name}} </p>
 <p> {{tea.description }} </p>
 <p> Caffeine Level: {{tea.caffeineLevel}} </p>
+<h4> {{tea.price | currency}}</h2>
 <add-to-cart add-to-cart="addToCart" tea="tea"></add-to-cart>
