@@ -2,9 +2,8 @@
 	<div class="item">
 		<a ng-href="#!/tea/{{tea.id}}">
 			<img class="teaImg" ng-src="/css/Images/{{tea.image}}"/> 
-			<h2> {{tea.name}} </h2>
-			<p> {{tea.teaType.name}} </p>
-			<h5 ng-show="{{addToCart}}"> {{tea.price | currency}}</h3>
+			<h3> {{tea.name}} </h3>
+			<h5 ng-show="{{addToCart}}"> {{tea.price | currency}}</h5>
 		</a>
 		<ng-transclude></ng-transclude>
 		<add-to-cart add-to-cart="addToCart" tea="tea"></add-to-cart>
