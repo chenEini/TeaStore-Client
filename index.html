@@ -9,21 +9,21 @@
 	</head>
     <body>        
         <header>
-            <div class="topMenu row">
+            <div class="topMenu">
                <cart-icon></cart-icon>             
             </div>
-            <div class="siteTitle row">
+            <div class="siteTitle">
                 <a href="#!/"><img class="siteLogo" src="css/Images/Icon.png" width="225"/></a>
             </div>
             <div class="teaWallpaper"></div>
-            <ul class="navBar nav nav-tabs nav-justified">
-                <li><a href="#!/"> Home </a></li>
-                <li><a href="#!/about" > About Us </a></li>
-                <li><a href="#!/allTeas"> All Teas </a></li>
-            </ul>
+			<ul class="navBar nav nav-tabs col-md-9">
+				<li class="col-sm-4"><a href="#!/"> Home </a></li>
+				<li class="col-sm-4"><a href="#!/about" > About Us </a></li>
+				<li class="col-sm-4"><a href="#!/allTeas"> All Teas </a></li>
+			</ul>
         </header>
         
-        <section class="mainView col-md-10" ng-view="">
+        <section class="col-md-12" ng-view="">
         </section>
         
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>

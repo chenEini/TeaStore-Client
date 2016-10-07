@@ -7,7 +7,7 @@ app.use('/javascript', express.static('javascript'));
 app.use('/pages', express.static('pages'));
 
 app.get("/", function(req, res){
-	res.sendFile(__dirname + 'index.html');
+	res.sendFile(__dirname + '/index.html');
 })
 
 app.listen(8080, function(){

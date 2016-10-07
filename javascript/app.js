@@ -24,7 +24,10 @@
                 resolve: {
                     teaList: function(TeaFactory){
                         return TeaFactory.getTeas();
-                    }
+                    },
+					teaTypeList: function(TeaFactory){
+						return TeaFactory.getTeaTypes();
+					}
                 }
               }).
               when('/tea/:teaId', {
@@ -40,13 +43,22 @@
                   templateUrl: 'pages/cart.html',
                   controller: 'CartController',
                   resolve: {
-                      teaList: function(CartFactory){
+                      cartItems: function(CartFactory){
                           return CartFactory.getCartItems();
                       }
                   }         
-              })
+              }).
+			when('/error', {
+				templateUrl: 'pages/error.html'				
+			})
               .otherwise('/');
         }
-      ]) 
+      ]).
+	run(function($rootScope, $location){
+		$rootScope.$on('$routeChangeError', function(event, current, previous, rejection){
+			event.preventDefault();
+			$location.path('/error');
+		})
+	}) 
 	
 })();

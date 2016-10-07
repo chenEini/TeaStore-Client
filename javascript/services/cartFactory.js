@@ -24,6 +24,17 @@ angular.module('teaStore').
 			},
 			getCartAmount: function(){
 				return sessionStorage.length;
+			},
+			updateItemQty: function(cartItem){
+				var itemInCart = sessionStorage.getItem(cartItem.item.id);
+				
+				if (itemInCart === null){
+					return;
+				}
+				else {
+					sessionStorage.setItem(cartItem.item.id, JSON.stringify(cartItem));
+				}
+
 			}
         }
 });

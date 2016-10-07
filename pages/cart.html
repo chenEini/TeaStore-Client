@@ -1,5 +1,11 @@
-<h5>your choosen product are : </h5>
-<tea-item ng-repeat="tea in teas" tea="tea.item" add-to-cart="addToCart">
-	<h4>{{tea.qty}}</h4>
-	<button class="btn btn-default" ng-click="removeItem(tea)">Remove</button>
-</tea-item>
+<div class="narrow">
+	<h5 ng-if="cartItems.length">your choosen product are : </h5>
+	<tea-item ng-repeat="tea in cartItems" tea="tea.item" add-to-cart="addToCart">
+		<div class="qtyWrap">
+			<lable>Quantity:</lable>
+			<input class="qty" type="number" min="1" max="100" ng-change="updateQty(tea)" ng-model="tea.qty"/>
+		</div>
+		<button class="btn btn-default" ng-click="removeItem(tea)">Remove</button>
+	</tea-item>
+	<h3 ng-if="!cartItems.length">you didnt choose any product... </h3>
+</div>

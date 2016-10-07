@@ -9,9 +9,13 @@ angular.module('teaStore').
             },
             templateUrl: 'pages/templates/addToCart.html',
 			link: function(scope, element, attrs){
-					scope.addItemToCart = function(){
+				var element = element;
+					scope.addItemToCart = function(event){
 						CartFactory.addCartItem(scope.tea);
-						scope.$root.cartAmount = CartFactory.getCartAmount();	
+						scope.$root.cartAmount = CartFactory.getCartAmount();
+						$(event.target).next(".successMsg").fadeIn("slow", function(){
+							$(event.target).next(".successMsg").fadeOut("slow");
+						});
 					};
 			}
 		}
