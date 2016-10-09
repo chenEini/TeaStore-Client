@@ -9,6 +9,6 @@
 		<button class="btn btn-default" ng-click="removeItem(tea)">Remove</button>
 	</tea-item>
 	<h3 class="cartTitle" ng-if="cartItems.length"> TOTAL: {{ getTotalPrice() | currency}}</h3>
-	<button class="Checkout btn btn-default">Checkout Now</button>
+	<button class="Checkout btn btn-default" ng-if="cartItems.length">Checkout Now</button>
 	<h3 ng-if="!cartItems.length">You have no items in your shopping cart.</h3>
 </div>
