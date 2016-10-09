@@ -33,7 +33,7 @@
 		</select>
 	</div>
 	<div class="items">
-		<tea-item ng-repeat="tea in (teas | filter:{name:searchText} | filter:filterByTeaType | filter:filterByCaffeineLevel | orderBy:orderbyfilter) as filteredTeas" tea="tea" add-to-cart="addToCart">
+		<tea-item ng-repeat="tea in (teas | filter:{name:searchText} | filter:filterByTeaType | filter:filterByCaffeineLevel | orderBy:orderbyfilter) as filteredTeas" tea="tea" add-to-cart="addToCart" show-price="showPrice">
 		</tea-item>
 		<h4 class="searchResultErr" ng-if="!filteredTeas.length">There are no matched items</h4>
 	</div>

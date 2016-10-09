@@ -4,6 +4,7 @@ angular.module('teaStore').
 		$scope.teaTypes = teaTypeList;
         $scope.orderbyfilter = "";
         $scope.addToCart = true;
+		$scope.showPrice = true;
 		$scope.caffeineLevels = [{key:0,value:"Free"},{key:1,value:"Low"},{key:2,value:"Medium"},{key:3,value:"High"}];
 	
 		$scope.typeFilter = {};

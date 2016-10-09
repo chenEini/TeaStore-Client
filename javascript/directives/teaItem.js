@@ -6,7 +6,8 @@ angular.module('teaStore').
 			transclude:true,
             scope:{
                 tea: '=',
-                addToCart: '='
+                addToCart: '=',
+				showPrice: '='
             },
             templateUrl: 'pages/templates/teaItem.html'
 		}

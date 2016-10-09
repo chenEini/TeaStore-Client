@@ -140,10 +140,16 @@ a, a:hover, a:focus{
 	margin-bottom: 20px;
 	text-decoration: underline;
 	font-weight: bold;
+	clear:both;
 }
 .searchResultErr{
 	font-weight: bold;
 	text-align: center;
 	background: #F0EFEE;
 	padding: 3px;
+}
+.Checkout{
+	margin-left: 5px;
+	font-size: 16px;
+	font-weight: bold;
 }
